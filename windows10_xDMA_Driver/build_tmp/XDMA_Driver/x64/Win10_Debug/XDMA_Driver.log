@@ -1,0 +1,26 @@
+﻿  Building 'XDMA_Driver' with toolset 'WindowsKernelModeDriver10.0' and the 'Universal' target platform.
+  Stamping C:\projects\xDMA_Windows10_driver_MSBUILD\sys\..\build_tmp\XDMA_Driver\x64\Win10_Debug\XDMA.inf [Version] section with DriverVer=02/09/2018,21.12.18.565
+  driver.c
+  file_io.c
+  Compiling...
+  Generating Code...
+  Building 'libxdma' with toolset 'WindowsKernelModeDriver10.0' and the 'Universal' target platform.
+  XDMA_Driver.vcxproj -> C:\projects\xDMA_Windows10_driver_MSBUILD\sys\..\build\x64\XDMA_Driver\Win10_Debug\XDMA.sys
+  Done Adding Additional Store
+  Successfully signed: C:\projects\xDMA_Windows10_driver_MSBUILD\sys\..\build\x64\XDMA_Driver\Win10_Debug\XDMA.sys
+  
+  Driver is a Universal Driver.
+  ..........................
+  Signability test complete.
+  
+  Errors:
+  None
+  
+  Warnings:
+  None
+  
+  Catalog generation complete.
+  C:\projects\xDMA_Windows10_driver_MSBUILD\build\x64\XDMA_Driver\Win10_Debug\XDMA_Driver\xdma.cat
+  Done Adding Additional Store
+  Successfully signed: C:\projects\xDMA_Windows10_driver_MSBUILD\sys\..\build\x64\XDMA_Driver\Win10_Debug\XDMA_Driver\xdma.cat
+  

@@ -1,0 +1,3 @@
+﻿  Building 'simple_dma' with toolset 'WindowsApplicationForDrivers10.0' and the 'Desktop' target platform.
+  simple_dma.c
+  simple_dma.vcxproj -> C:\projects\xDMA_Windows10_driver_MSBUILD\build\x64\bin\simple_dma.exe

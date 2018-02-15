@@ -1,0 +1,7 @@
+for i in {1..1}
+do
+echo "---------- test loop $i "
+./passthru.hw 0xea000000 ../../../bitfiles/role/VU9P_AXI_ICAP_PR_DESIGN_top.IP_SDX_ACCL_KERNEL_PASSTHRU_pblock_role_HLS_PR
+echo "------------------------"
+sleep 1
+done

@@ -1,0 +1,80 @@
+SRCS_GPP   :=  $(SRCS_HOST) $(SRCS_XOCC)
+
+.PHONY: all
+all: sdx_host_exe tb_gpp
+
+.PHONY: srai_sw_sim
+srai_sw_sim: tb_gpp
+
+.PHONY: srai_sw_sim_dbg
+srai_sw_sim_dbg: tb_gpp_debug
+
+.PHONY: srai_hw
+srai_hw: tb_gpp_hw
+
+.PHONY: srai_hw_dbg
+srai_hw_dbg: tb_gpp_hw_debug
+
+.PHONY: sdx_sw_emu
+sdx_sw_emu: sdx_host_exe sdx_sw_emu.xclbin
+
+.PHONY: sdx_hw_emu
+sdx_hw_emu: sdx_host_exe sdx_hw_emu.xclbin
+
+.PHONY: sdx_hw
+sdx_hw: sdx_host_exe sdx_hw.xclbin
+
+
+help:
+	@echo "Make targets :"
+	@echo "srai_sw_sim | srai_sw_sim_dbg | srai_hw | srai_hw_dbg | sdx_sw_emu | sdx_hw_emu | sdx_hw | clean | clean_all"
+
+tb_gpp: $(SRCS_GPP) 
+	$(CXX) $(CXXFLAGS_GPP_ONLY) -o $(DESIGN_NAME).sw_sim $^ 
+
+tb_gpp_debug: $(SRCS_GPP) 
+	$(CXX) $(CXXFLAGS_GPP_ONLY_DEBUG) -o $(DESIGN_NAME).sw_sim $^ 
+
+HLS_ip: $(SRCS_GPP) 
+	cd ../vivado_hls_prj;vivado_hls -f vivado_hls_project.tcl
+
+tb_gpp_hw_debug: $(SRCS_GPP) 
+	$(CXX) $(CXXFLAGS_GPP_HW_DEBUG) -o $(DESIGN_NAME).dbg_hw $^ 
+
+tb_gpp_hw: $(SRCS_GPP) 
+	$(CXX) $(CXXFLAGS_GPP_HW) -o $(DESIGN_NAME).hw $^ 
+
+sdx_host_exe: $(SRCS_GPP)
+	$(CXX) $(CXXFLAGS) -o $@ $^ 
+
+sdx_sw_emu.xclbin: $(SRCS_XOCC) 
+	$(XOCC) $(XOCC_SW_EMU) $^ -o $@
+
+sdx_hw_emu.xclbin: $(SRCS_XOCC)  
+	$(XOCC) $(XOCC_HW_EMU) $^ -o $@
+
+sdx_hw.xclbin: $(SRCS_XOCC)  
+	$(XOCC) $(XOCC_HW) $^ -o $@
+
+clean:
+	rm -rf *.xclbin tb_gpp sdx_host_exe xocc* sdaccel* .Xil
+	-rm -rf $(DESIGN_NAME).dbg_sw_sim 
+	-rm -rf $(DESIGN_NAME).dbg_hw 
+	-rm -rf $(DESIGN_NAME).sw_sim 
+	-rm -rf $(DESIGN_NAME).hw 
+	-rm -rf gmon.out
+	-rm -rf log.out
+	-rm -rf emulation_debug.log
+	-rm -rf webtalk* 
+clean_all:
+	rm -rf *.xclbin tb_gpp sdx_host_exe xocc* sdaccel* .Xil _xocc_*.dir
+	-rm -rf $(DESIGN_NAME).dbg_sw_sim 
+	-rm -rf $(DESIGN_NAME).dbg_hw 
+	-rm -rf $(DESIGN_NAME).sw_sim 
+	-rm -rf $(DESIGN_NAME).hw 
+	-rm -rf gmon.out
+	-rm -rf log.out
+	-rm -rf emulation_debug.log
+	-rm -rf webtalk* 
+
+

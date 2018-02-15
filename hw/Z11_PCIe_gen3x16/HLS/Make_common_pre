@@ -1,0 +1,31 @@
+XILINX_OPENCL := /home/applications/Xilinx/SDx/2017.2
+#XILINX_OPENCL := /proj/xbuilds/2017.2_sdx_1031_1/installs/lin64/SDx/2017.2
+HLS_INCLUDE := $(XILINX_OPENCL)/Vivado_HLS/include 
+#DSA := xilinx:xil-accel-rd-vu9p:4ddr-xpr:4.1
+DSA := xilinx:vcu1525:4ddr-xpr:4.2
+XOCC := $(XILINX_OPENCL)/bin/xocc
+CPP := g++
+#CPP := xcpp 
+INCLUDES   :=  -I$(HLS_INCLUDE) -I../../common_src -I../src
+KERNEL_FREQUENCY_MHZ := 100
+
+OPENCL_INC := $(XILINX_OPENCL)/runtime/include/1_2
+OPENCL_LIB := $(XILINX_OPENCL)/runtime/lib/x86_64
+
+SRCS_HOST  :=  ../../common_src/srai_accel_utils.cpp ../../common_src/getCPUTime.cpp
+
+CXXFLAGS := -O3 -std=c++0x $(INCLUDES) -I$(OPENCL_INC) -lrt  -L$(OPENCL_LIB)  -lxilinxopencl
+#CXXFLAGS := -g -Wall -Werror -DNUMBER_OF_COMPUTE_UNITS=$(NUMBER_OF_CU) -I$(OPENCL_INC) -I$(HLS_INCLUDE) -L$(OPENCL_LIB) -lxilinxopencl
+#CXXFLAGS_GPP_ONLY := -g -Wall -DGPP_ONLY_FLOW -DNUMBER_OF_COMPUTE_UNITS=$(NUMBER_OF_CU) -I$(OPENCL_INC) -I$(HLS_INCLUDE) -L$(OPENCL_LIB) -lxilinxopencl -lrt 
+CXXFLAGS_GPP_ONLY := -O3 -std=c++0x -DGPP_ONLY_FLOW $(INCLUDES) -I$(OPENCL_INC) -L$(OPENCL_LIB) -lrt 
+CXXFLAGS_GPP_ONLY_DEBUG := -g3 -std=c++0x -DGPP_ONLY_FLOW $(INCLUDES) -I$(OPENCL_INC) -L$(OPENCL_LIB) -lrt 
+CXXFLAGS_GPP_HW   := -O3 -std=c++0x -DSRAI__HLS_ACCEL  $(INCLUDES) -I$(OPENCL_INC)  -lrt
+CXXFLAGS_GPP_HW_DEBUG   := -g3 -std=c++0x -DSRAI__HLS_ACCEL $(INCLUDES) -I$(OPENCL_INC) -lrt 
+
+#XOCC_COMMON_FLAGS := -g -s --xdevice $(DSA) -DXOCC_CPP_KERNEL --memory_port_data_width all:512 --kernel sdx_cppKernel_top --nk sdx_cppKernel_top:$(NUMBER_OF_CU)
+#XOCC_COMMON_FLAGS := -g -s --xdevice $(DSA) -DXOCC_CPP_KERNEL --kernel sdx_cppKernel_top --nk sdx_cppKernel_top:$(NUMBER_OF_CU)
+XOCC_COMMON_FLAGS := -g -s --platform $(DSA) -DXOCC_CPP_KERNEL -I../../common_src -I../src  --kernel sdx_cppKernel_top --kernel_frequency $(KERNEL_FREQUENCY_MHZ)
+
+XOCC_SW_EMU := $(XOCC_COMMON_FLAGS) -t sw_emu
+XOCC_HW_EMU := $(XOCC_COMMON_FLAGS) -t hw_emu
+XOCC_HW := $(XOCC_COMMON_FLAGS) -t hw

@@ -1,0 +1,4 @@
+﻿  Building 'xdma_rw' with toolset 'WindowsApplicationForDrivers10.0' and the 'Desktop' target platform.
+  xdma_rw.c
+  xdma_rw.vcxproj -> C:\projects\xDMA_Windows10_driver_MSBUILD\build\x64\bin\xdma_rw.exe
+          1 file(s) copied.

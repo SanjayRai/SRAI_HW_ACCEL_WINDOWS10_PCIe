@@ -1,0 +1,5 @@
+rm -rf .Xil/
+rm -rf *.jou
+rm -rf *.log
+rm -rf webtalk* 
+

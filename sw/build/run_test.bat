@@ -1,0 +1,3 @@
+SRAI_VCU1525_ACCL\x64\Debug\vector_mult.exe ..\..\bitfiles\role\VU9P_AXI_ICAP_PR_DESIGN_top.IP_SDX_ACCL_KERNEL_FP_VECTOR_MULT_pblock_role_HLS_PR_NORTH_partial.bin
+SRAI_VCU1525_ACCL\x64\Debug\matrix_invert_5x5.exe ..\..\bitfiles\role\VU9P_AXI_ICAP_PR_DESIGN_top.IP_SDX_ACCL_MATRIX_INVERT_5X5_CPP_KERNEL_pblock_role_HLS_PR_NORTH_partial.bin
+SRAI_VCU1525_ACCL\x64\Debug\matrix_invert_4x4.exe ..\..\bitfiles\role\VU9P_AXI_ICAP_PR_DESIGN_top.IP_SDX_ACCL_MATRIX_INVERT_4X4_CPP_KERNEL_pblock_role_HLS_PR_NORTH_partial.bin

@@ -1,0 +1,3 @@
+﻿  Building 'xdma_info' with toolset 'WindowsApplicationForDrivers10.0' and the 'Desktop' target platform.
+  xdma_info.cpp
+  xdma_info.vcxproj -> C:\projects\xDMA_Windows10_driver_MSBUILD\build\x64\bin\xdma_info.exe

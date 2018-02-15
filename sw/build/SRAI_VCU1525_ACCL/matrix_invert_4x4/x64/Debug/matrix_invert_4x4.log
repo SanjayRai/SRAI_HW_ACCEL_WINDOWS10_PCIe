@@ -1,0 +1,20 @@
+﻿  tb_matrix_inv_4x4_north.cpp
+c:\xilinx\vivado\2017.4\include\etc\ap_private.h(513): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\xilinx\vivado\2017.4\include\etc\ap_private.h(539): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\xilinx\vivado\2017.4\include\etc\ap_fixed_sim.h(2407): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\xilinx\vivado\2017.4\include\etc\ap_fixed_sim.h(2409): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\xilinx\vivado\2017.4\include\etc\ap_fixed_sim.h(2440): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\projects\srai_xdma_tests\test13_vcu1525_srai_accl\src_matrix_inv_4x4\tb_matrix_inv_4x4_north.cpp(242): warning C4101: 'in_arg_0': unreferenced local variable
+c:\projects\srai_xdma_tests\test13_vcu1525_srai_accl\src_matrix_inv_4x4\tb_matrix_inv_4x4_north.cpp(183): warning C4101: 'xfer_count': unreferenced local variable
+c:\projects\srai_xdma_tests\test13_vcu1525_srai_accl\src_matrix_inv_4x4\tb_matrix_inv_4x4_north.cpp(243): warning C4101: 'out_arg_0': unreferenced local variable
+  matrix_operation_wrapper.cpp
+c:\xilinx\vivado\2017.4\include\etc\ap_private.h(513): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\xilinx\vivado\2017.4\include\etc\ap_private.h(539): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\xilinx\vivado\2017.4\include\etc\ap_fixed_sim.h(2407): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\xilinx\vivado\2017.4\include\etc\ap_fixed_sim.h(2409): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\xilinx\vivado\2017.4\include\etc\ap_fixed_sim.h(2440): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\projects\srai_xdma_tests\test13_vcu1525_srai_accl\src_matrix_inv_4x4\matrix_operation_wrapper.cpp(10): warning C4068: unknown pragma
+c:\projects\srai_xdma_tests\test13_vcu1525_srai_accl\src_matrix_inv_4x4\matrix_operation_wrapper.cpp(12): warning C4068: unknown pragma
+  srai_accel_utils.cpp
+  Generating Code...
+  matrix_invert_4x4.vcxproj -> C:\projects\SRAI_xDMA_tests\test13_VCU1525_SRAI_ACCL\build\SRAI_VCU1525_ACCL\x64\Debug\matrix_invert_4x4.exe

@@ -1,0 +1,6 @@
+﻿  Building 'libxdma' with toolset 'WindowsKernelModeDriver10.0' and the 'Universal' target platform.
+  device.c
+  dma_engine.c
+  interrupt.c
+  Generating Code...
+  libxdma.vcxproj -> C:\projects\xDMA_Windows10_driver_MSBUILD\libxdma\..\build\x64\libxdma\Win10_Debug\xdma.lib

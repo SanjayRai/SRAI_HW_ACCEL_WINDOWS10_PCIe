@@ -1,0 +1,1 @@
+bsub -q long -n 16 -R "select[type=X86_64 && osdistro=rhel && osver=ws6] rusage [mem=16000]" 'vivado -source vivado_batch.tcl -mode batch'

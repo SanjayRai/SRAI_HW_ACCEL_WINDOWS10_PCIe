@@ -1,0 +1,10 @@
+﻿  tb_fp_vector_mult.cpp
+c:\xilinx\vivado\2017.4\include\etc\ap_private.h(513): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\xilinx\vivado\2017.4\include\etc\ap_private.h(539): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\xilinx\vivado\2017.4\include\etc\ap_fixed_sim.h(2407): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\xilinx\vivado\2017.4\include\etc\ap_fixed_sim.h(2409): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\xilinx\vivado\2017.4\include\etc\ap_fixed_sim.h(2440): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\projects\srai_xdma_tests\test13_vcu1525_srai_accl\src_vector_mult\tb_fp_vector_mult.cpp(212): warning C4554: '&': check operator precedence for possible error; use parentheses to clarify precedence
+c:\projects\srai_xdma_tests\test13_vcu1525_srai_accl\src_vector_mult\tb_fp_vector_mult.cpp(115): warning C4101: 'base_address': unreferenced local variable
+c:\projects\srai_xdma_tests\test13_vcu1525_srai_accl\src_vector_mult\tb_fp_vector_mult.cpp(117): warning C4101: 'xfer_count': unreferenced local variable
+  vector_mult.vcxproj -> C:\projects\SRAI_xDMA_tests\test13_VCU1525_SRAI_ACCL\build\SRAI_VCU1525_ACCL\x64\Debug\vector_mult.exe

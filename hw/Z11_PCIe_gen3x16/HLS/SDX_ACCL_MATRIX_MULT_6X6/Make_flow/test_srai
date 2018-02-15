@@ -1,0 +1,7 @@
+for i in {1..1}
+do
+echo "---------- test loop $i "
+./matrix_mult_6x6.hw 0xea000000 ../../../bitfiles/role/VU9P_AXI_ICAP_PR_DESIGN_top.IP_SDX_ACCL_MATRIX_MULT_6X6_pblock_role_HLS_PR
+echo "------------------------"
+sleep 1
+done

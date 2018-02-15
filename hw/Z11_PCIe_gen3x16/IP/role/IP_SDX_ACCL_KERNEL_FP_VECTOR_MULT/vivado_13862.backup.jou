@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Jan 11 03:32:34 2018
+# Process ID: 13862
+# Current directory: /home/sanjayr/projects/TUL_VCU1525/Z10_PCIe_gen3x16/IP/role/IP_SDX_ACCL_KERNEL_FP_VECTOR_MULT
+# Command line: vivado -mode batch -source inital_hls_sdx_import.tcl
+# Log file: /home/sanjayr/projects/TUL_VCU1525/Z10_PCIe_gen3x16/IP/role/IP_SDX_ACCL_KERNEL_FP_VECTOR_MULT/vivado.log
+# Journal file: /home/sanjayr/projects/TUL_VCU1525/Z10_PCIe_gen3x16/IP/role/IP_SDX_ACCL_KERNEL_FP_VECTOR_MULT/vivado.jou
+#-----------------------------------------------------------
+source inital_hls_sdx_import.tcl
